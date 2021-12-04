@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 interface Props {};
 
 interface State {
   count: number;
-}
+};
 
-export default class ClickCounter extends Component<Props, State> {
+export default class HoverCounter extends Component<Props, State> {
   constructor(props: Props & State) {
     super(props);
     this.state = {
@@ -23,9 +23,9 @@ export default class ClickCounter extends Component<Props, State> {
   render() {
     return (
       <div>
-        <button onClick={this.incrementCount}>
-          clicled {this.state.count} times
-        </button>
+        <h3 onMouseOver={this.incrementCount}>
+          Hover {this.state.count} times
+        </h3>
       </div>
     )
   }
