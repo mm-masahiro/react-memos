@@ -7,6 +7,7 @@ interface State {
 }
 
 export default class ClickCounter extends Component<Props, State> {
+  // HoverCounterと共通のロジック
   constructor(props: Props & State) {
     super(props);
     this.state = {
