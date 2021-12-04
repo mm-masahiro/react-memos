@@ -8,6 +8,7 @@ interface State {
 
 const HighOrderComponent = OriginalComponent => {
   class NewComponent extends React.Component<Props, State> {
+    // ClickCounterとHoverCounterとの共通のロジック
     constructor(props: Props & State) {
       super(props);
       this.state = {

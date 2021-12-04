@@ -1,33 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component, ReactNode } from 'react';
+import HighOrderComponent from '../HOC/HighOrderComponent';
 
-interface Props {};
+interface Props {
+  increment: ReactNode;
+  count: number;
+};
 
 interface State {
   count: number;
 }
 
-export default class ClickCounter extends Component<Props, State> {
-  // HoverCounterと共通のロジック
-  constructor(props: Props & State) {
-    super(props);
-    this.state = {
-      count: 0
-    };
-  }
-
-  incrementCount = () => {
-    this.setState(prevState => {
-      return { count: prevState.count + 1};
-    });
-  };
+class ClickCounter extends Component<Props, State> {
 
   render() {
     return (
       <div>
-        <button onClick={this.incrementCount}>
-          clicled {this.state.count} times
+        <button onClick={this.props.incrementCount}>
+          clicled {this.props.count} times
         </button>
       </div>
     )
   }
 };
+
+export default HighOrderComponent(ClickCounter);
