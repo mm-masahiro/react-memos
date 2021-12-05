@@ -1,11 +1,9 @@
-import ClickCounter from './class-component/ClickCounter';
-import HoverCounter from './class-component/HoverCounter';
+import Root from "./object-literal-components";
 
 function App() {
   return (
     <div className="App">
-      <ClickCounter />
-      <HoverCounter />
+      <Root type='TEST1' />
     </div>
   );
 }
