@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
-const useCountTime = () => {
-  const [count, setCount] = useState(0);
+const useCountTime = (): number => {
+  const [count, setCount] = useState<number>(0);
 
   useEffect(() => {
     const timer = setInterval(() => {

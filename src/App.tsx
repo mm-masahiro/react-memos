@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       {/* <Root type='TEST1' /> */}
-      <p>{count}</p>
+      {/* <p>{count}</p> */}
     </div>
   );
 }
